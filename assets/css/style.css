@@ -216,6 +216,15 @@ button {
   margin: 8px;
   outline: none;
   width: 50px;
+<<<<<<< HEAD
+}
+.weight-box{
+  border: 1px solid #333; 
+  padding: 15px 400px 15px 30px;
+  display: inline-flex; 
+  font-size: 16px; 
+=======
+>>>>>>> main
   align-items: center;
 }
 .weigh-box {
@@ -486,6 +495,10 @@ button {
 }
 
 .instagram {
+<<<<<<< HEAD
+  background-image: url('instagram-icon.png'); /* Replace with actual icon */
+}
+=======
   background-image: url('IGicon.gif');
 }
 
@@ -553,3 +566,4 @@ button {
 .copyright {
   margin-right: -600px;
 }
+>>>>>>> main
