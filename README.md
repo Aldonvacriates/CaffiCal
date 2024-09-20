@@ -4,10 +4,17 @@ This application is named CaffiCalc which enables users to  personally track and
 
 ## Description
 
+<<<<<<< HEAD
 Caffeine Calculator is an intuitive app that simplifies tracking and optimizing your daily caffeine intake. With a user-friendly interface, it allows you to input details about your age, weight and daily coffee intake and calculates and return answers if your intake is healthy, moderate and excessive amount 
 
 ## Visual
 ![image](Bootcamp-Project-1.2.jpg)
+=======
+Caffeine Calculator is an intuitive app that simplifies tracking and optimizing your daily caffeine intake. With a user-friendly interface, it allows you to input details about your age, weight and daily coffee intake and calculates and return answers if your intake is healthy, moderate and excessive amount.
+
+## Visual
+![Website mockup](assets/css/Bootcamp-Project-1.2.jpg)
+>>>>>>> main
 
 ## Usage
 
@@ -24,5 +31,3 @@ Tell people where they can go to for help  in listed email below.
 
 ## Authors and acknowledgment
 The contributors to this project is Helona Mekuria, Aldo Herrera and Trish Ho.
-
-
