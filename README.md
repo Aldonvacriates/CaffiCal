@@ -1,6 +1,6 @@
 # CaffiCalc
 
-A single-page caffeine intake calculator: enter your age, weight and a week of daily caffeine amounts, and it tells you whether you are within commonly cited limits for your age group and body weight.
+A single-page caffeine intake calculator: enter your age, weight and a week of daily caffeine amounts, and it compares your intake with the age-based daily limits and the per-kilogram range built into the app.
 
 Live demo: https://aldonvacriates.github.io/CaffiCal/
 
