@@ -380,7 +380,7 @@ button {
 /* Styling for each section */
 .footersection > div {
   flex: 1; /* Each section takes equal space */
-  box-sizing: border-box; /
+  box-sizing: border-box;
 }
 
 .newsletter, .contact, .social {
