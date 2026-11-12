@@ -54,7 +54,7 @@ assets/js/script.js   Calculation and localStorage logic
 
 - Show results on the page instead of `alert()`, and replace the `prompt()` calls with form fields.
 - Validate inputs (numeric age and weight, no negative values).
-- Resolve the leftover merge-conflict markers in `assets/css/style.css`, move images out of `assets/css/` into an images folder, and remove the unused screenshots at the repo root.
+- Move images out of `assets/css/` into an images folder, and remove the unused screenshots at the repo root.
 - Fix the navbar toggler, which uses Bootstrap 4 `data-toggle` attributes with Bootstrap 5, and remove the placeholder nav links.
 
 ## Credits
