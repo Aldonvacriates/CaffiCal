@@ -1,33 +1,62 @@
-# Name CaffiCalc
+# CaffiCalc
 
-This application is named CaffiCalc which enables users to  personally track and set personal caffeine limits based on health guidelines or your own preferences, and receive tailored recommendations to stay within safe consumption levels.
+A single-page caffeine intake calculator: enter your age, weight and a week of daily caffeine amounts, and it compares your intake with the age-based daily limits and the per-kilogram range built into the app.
 
-## Description
+Live demo: https://aldonvacriates.github.io/CaffiCal/
 
-<<<<<<< HEAD
-Caffeine Calculator is an intuitive app that simplifies tracking and optimizing your daily caffeine intake. With a user-friendly interface, it allows you to input details about your age, weight and daily coffee intake and calculates and return answers if your intake is healthy, moderate and excessive amount 
+Bootcamp group project built in September 2024 with Helona Mekuria and Trish Ho. This repository is my copy of the team project, whose history started in [HelonaNoab/CaffiCalc](https://github.com/HelonaNoab/CaffiCalc).
 
-## Visual
-![image](Bootcamp-Project-1.2.jpg)
-=======
-Caffeine Calculator is an intuitive app that simplifies tracking and optimizing your daily caffeine intake. With a user-friendly interface, it allows you to input details about your age, weight and daily coffee intake and calculates and return answers if your intake is healthy, moderate and excessive amount.
+![Design mockup](assets/css/Bootcamp-Project-1.2.jpg)
 
-## Visual
-![Website mockup](assets/css/Bootcamp-Project-1.2.jpg)
->>>>>>> main
+*Design mockup used for the page layout. The live page also has a Bootstrap navbar.*
 
-## Usage
+## Features
 
-Input in the modal how old you are, weekly intake of caffeine in milligrams and body weigh to get a results of: 
-Healthy Amount
-Up to 200 mg/day is considered safe for most adults, according to health authorities like the FDA. This is roughly the equivalent of 4 cups of brewed coffee.
-Moderate Amount
-300–400 mg/day is considered a moderate amount. This is about 2–4 cups of coffee and is generally safe for most people without significant side effects.
-Excessive Amount
-400+ mg/day is generally considered excessive. This may lead to side effects like restlessness, insomnia, headaches, dizziness, fast heartbeat, and anxiety.
+- Questionnaire for age, weight (kg) and caffeine in mg for each day of the week (Sunday to Saturday).
+- Age-based daily limits: no caffeine recommended under 12, 100 mg/day for ages 12-17, 400 mg/day for adults (reduced by 10% for women over 18).
+- Compares the weekly total against seven times the daily limit.
+- For adults, also checks the average daily intake against a 3-6 mg per kg of body weight range.
+- Saves the last submission to `localStorage` and re-runs the calculation with a "Welcome back" message on the next visit.
+- Static informational sections on caffeine benefits, side effects and sleep.
 
-## Support
-Tell people where they can go to for help  in listed email below.
+Results are shown in browser `alert()` dialogs, and name and gender are asked for with `prompt()`. This is a learning project, not medical advice.
 
-## Authors and acknowledgment
-The contributors to this project is Helona Mekuria, Aldo Herrera and Trish Ho.
+## Tech stack
+
+HTML, CSS, vanilla JavaScript, Bootstrap 5.3.3 (CDN), `localStorage`, GitHub Pages.
+
+## How it works
+
+- `assets/js/script.js` holds all the logic. `calculateCaffeine()` reads the form fields, stores the seven daily values in an array, saves them, and passes them to `calculateCaffeineIntake()`.
+- `calculateCaffeineIntake()` picks a daily limit by age, applies the gender adjustment, sums the week with `reduce`, and builds one feedback string. Teens stop after the weekly check; adults also get the per-kg check.
+- `saveToLocalStorage()` and `loadFromLocalStorage()` persist one `userData` object as JSON; a `load` listener uses it to replay the last result.
+
+## Getting started
+
+There is no build step, package manager, environment variable or test suite.
+
+```bash
+git clone https://github.com/Aldonvacriates/CaffiCal.git
+cd CaffiCal
+```
+
+Open `index.html` in a browser, or serve the folder with any static file server (for example `python -m http.server`).
+
+## Project structure
+
+```
+index.html            Page markup (questionnaire, info sections, footer)
+assets/css/style.css  Styles; page images also live in assets/css/
+assets/js/script.js   Calculation and localStorage logic
+```
+
+## What I'd improve next
+
+- Show results on the page instead of `alert()`, and replace the `prompt()` calls with form fields.
+- Validate inputs (numeric age and weight, no negative values).
+- Move images out of `assets/css/` into an images folder, and remove the unused screenshots at the repo root.
+- Fix the navbar toggler, which uses Bootstrap 4 `data-toggle` attributes with Bootstrap 5, and remove the placeholder nav links.
+
+## Credits
+
+Built by Helona Mekuria ([@HelonaNoab](https://github.com/HelonaNoab)), Aldo Herrera and Trish Ho ([@trishho](https://github.com/trishho)).
